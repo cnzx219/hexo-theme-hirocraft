@@ -25,3 +25,16 @@ if theme.disqus
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     script(id='dsq-count-scr' src='//#{theme.disqus}.disqus.com/count.js' async)
+
+#comments
+script(src="https://imsun.github.io/gitment/dist/gitment.browser.js")
+script.
+    new Gitment({
+      id: '#{page.path}',
+      owner: 'cnzx219',
+      repo: 'blog-comments',
+      oauth: {
+        client_id: '83e74e6862b47d6e4309',
+        client_secret: 'a5c328cfb8b6a92c78991b4eb2c35a31c8682bc0',
+      },
+    }).render('comments');
