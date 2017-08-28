@@ -1,0 +1,21 @@
+extends partial/layout
+
+block container
+    h1.index-title Posts
+    include mixins/post
+    +posts()
+
+    include mixins/paginator
+    +home()
+
+    h1 Categories
+    .index-categories
+        != list_categories({show_count: theme.show_category_count, style: 'text'})
+
+    h1 Tags
+    .index-tags
+        != tagcloud({min_font: 14, max_font: 14, amount: 100, orderby: 'count'})
+
+
+block copyright
+    include partial/copyright

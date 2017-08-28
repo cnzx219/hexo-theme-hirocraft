@@ -1,0 +1,16 @@
+menu:
+    Home: /
+    Archive: /archives/
+    About: /about/
+    Rss: /atom.xml
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Copyright Infomation
+startyear: 2017

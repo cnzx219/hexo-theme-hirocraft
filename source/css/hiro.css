@@ -1,0 +1,171 @@
+.wrap {
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 2;
+  max-width: 900px;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera San;
+  text-rendering: geometricPrecision;
+}
+
+header {
+  min-height:60px;
+}
+
+header .nav {
+  float: right;
+  left: 80px;
+}
+
+header .logo-link img {
+  height: 60px;
+}
+
+header .nav-list-item {
+  display: inline-block;
+  padding: 19px  10px;
+}
+
+header .nav-list-item a {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+ul.nav, ul.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul {
+  margin: 1rem 0;
+}
+
+a, a:active {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: #42b983;
+  text-decoration: none;
+}
+
+.post-content a {
+  color: #42b983;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  border-bottom: 2px solid #42b983;
+}
+
+a.nav-list-link.active, a.nav-list-link:hover, a.post-title-link:hover {
+  border-bottom: 2px solid #42b983;
+}
+
+.paginator a:hover, .paginator a:hover {
+  border-bottom: 2px solid #42b983;
+}
+
+.copyright {
+  margin: 4em 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+footer .copyright p, footer .copyright a {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+footer .copyright a:hover {
+  color: #888;
+}
+
+@font-face{ 
+  font-family: 'sourcesanspro';
+  src: url("../font/sourcesanspro.woff2") format("woff2"),url("../font/sourcesanspro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #000;
+}
+h1 {
+  font-size: 16px;
+}
+h2 {
+  font-size: 14px;
+}
+h3 {
+  font-size: 13px;
+}
+
+h1::before {
+  content: '# ';
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h2::before {
+  content: '## ';
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h3::before {
+  content: '### ';
+  color: rgba(0, 0, 0, 0.5);
+}
+
+p, li, table, code {
+  color: #424242;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.post-info {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.list-post-info {
+  padding-left: 14px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+  border-right:1px solid #000;
+  border-bottom:1px solid #000
+} 
+
+table td {
+  border-left:1px solid #000;
+  border-top:1px solid #000
+}
+
+img {
+  width: 100%;
+}
+
+span.categories {
+  padding-left: 15px;
+}
+
+span.categories-item {
+  padding-left: 8px;
+}
+
+span.tags {
+  padding-left: 15px;
+}
+
+span.tags-item {
+  padding-left: 8px;
+}
+
+.index-tags, .index-categories {
+  font-size: 14px;
+}

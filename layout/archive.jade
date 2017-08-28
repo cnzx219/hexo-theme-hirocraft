@@ -1,0 +1,18 @@
+extends partial/layout
+
+block container
+    if page.category
+        h1.label-title= 'Category: ' + page.category
+    else if page.tag
+        h1.index-title= 'Tag: ' + page.tag
+    else
+        h1.index-title Archive
+    include mixins/post
+    +postList()
+
+block pagination
+    include mixins/paginator
+    +home()
+
+block copyright
+    include partial/copyright

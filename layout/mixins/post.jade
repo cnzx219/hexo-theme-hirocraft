@@ -1,0 +1,63 @@
+mixin postInfo(item)
+    .post-info
+        != full_date(item.date, 'll')
+        if item.from && (is_home() || is_post())
+            a.post-from(href=item.from target="_blank" title=item.from) 翻译 · 原文地址
+
+//- Index Page
+mixin posts()
+    ul.home.post-list
+        - page.posts.each(function (item) {
+            li.post-list-item
+                article.post-block
+                    h2.post-title
+                        a.post-title-link(href= url_for(item.path))
+                            != item.title
+                        span.list-post-info
+                            != full_date(item.date, 'll')
+                    .post-content
+                        != item.excerpt
+        - })
+
+//- Archive Page
+mixin postList()
+    .archive
+        - var year = 0;
+        - var change = false;
+        - page.posts.each(function (item) {
+            - var itemYear = date(item.date, 'YYYY') - 0;
+            - change = year !== itemYear;
+            - year = change ? itemYear : year;
+            if change 
+                h2.archive-year!= year
+                h3
+                    a.post-title-link(href= url_for(item.path))
+                        != item.title
+                    span.list-post-info
+                        != full_date(item.date, 'll')
+        - })
+
+//- Post Page
+mixin post(item)
+    .post
+        article.post-block
+            h1.post-title
+                != item.title
+            .post-info
+                span
+                    | Created at 
+                    != full_date(item.date, 'll')
+                if page.categories
+                    span.categories
+                        i.fa.fa-archive
+                        for category in page.categories.toArray()
+                            span.categories-item
+                                a(href=url_for(category.path))= category.name
+                if page.tags
+                    span.tags
+                        i.fa.fa-tags
+                        for tag in page.tags.toArray()
+                            span.tags-item
+                                a(href=url_for(tag.path))= tag.name
+            .post-content
+                != item.content
